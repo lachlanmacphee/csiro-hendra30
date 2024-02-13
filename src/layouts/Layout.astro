@@ -1,61 +1,43 @@
 ---
+
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>CSIRO Conference</title>
-	</head>
-	<body>
-		<nav class="navbar">
-			<div class="container">
-			  <div class="logo">
-				<a href="#">Your Logo</a>
-			  </div>
-			  <ul class="nav-links">
-				<li><a href="">Home</a></li>
-				<li><a href="accomodation">Accomodation</a></li>
-				<li><a href="register">Register</a></li>
-				<li><a href="landing">Landing</a></li>
-			  </ul>
-			</div>
-		  </nav>
-		  <div class="container">
-			<slot />
-		  </div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>CSIRO Conference</title>
+  </head>
+  <body>
+    <nav class="bg-gray-800 shadow-lg">
+      <div class="mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <a href="/" class="text-white text-lg font-bold">Hendra @ 30</a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="/accomodation"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Accomodation</a
+              >
+              <a
+                href="/register"
+                class="inline-block bg-blue-500 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Register</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <slot />
+    </main>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>

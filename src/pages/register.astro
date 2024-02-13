@@ -3,75 +3,78 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="container">
-    <h1>Conference Registration Form</h1>
-    <form action="#" method="post">
-      <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" name="fullname" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required />
-
-      <label for="company">Company/Organization:</label>
-      <input type="text" id="company" name="company" />
-
-      <label for="attendeeType">Attendee Type:</label>
-      <select id="attendeeType" name="attendeeType">
-        <option value="general">General Attendee</option>
-        <option value="speaker">Speaker</option>
-        <option value="sponsor">Sponsor</option>
-        <option value="media">Media</option>
-      </select>
-      <input type="submit" value="Register" />
+  <div class="container mx-auto flex justify-center">
+    <form action="#" method="post" class="max-w-md">
+      <h1 class="text-2xl font-bold mb-4">Conference Registration Form</h1>
+      <div class="mb-4">
+        <label for="firstname" class="block mb-2">First Name:</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          required
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="lastname" class="block mb-2">Last Name:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          required
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block mb-2">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="phone" class="block mb-2">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="company" class="block mb-2">Company/Organization:</label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="attendeeType" class="block mb-2">Attendee Type:</label>
+        <select
+          id="attendeeType"
+          name="attendeeType"
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        >
+          <option value="general">General Attendee</option>
+          <option value="speaker">Speaker</option>
+          <option value="sponsor">Sponsor</option>
+          <option value="media">Media</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <input
+          type="submit"
+          value="Register"
+          class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
+        />
+      </div>
     </form>
   </div>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 600px;
-      margin: 50px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-    }
-    label {
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-    input[type="submit"] {
-      background-color: #4caf50;
-      color: white;
-      padding: 14px 20px;
-      margin: 20px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 16px;
-    }
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
 </Layout>

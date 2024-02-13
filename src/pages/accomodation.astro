@@ -3,88 +3,46 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-<div class="container">
-    <h1>Recommended Accommodations</h1>
-    <div class="accommodation">
-      <img src="hotel1.jpg" alt="Hotel 1">
+  <div class="container mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Recommended Accommodations</h1>
+    <div class="accommodation flex items-center mb-8">
+      <img src="hotel1.jpg" alt="Hotel 1" class="w-32 h-32 mr-4" />
       <div class="accommodation-info">
-        <h2>Hotel A</h2>
-        <p>Located in downtown area</p>
-        <p>Price per night: $100</p>
-        <a href="booking-link-hotelA" class="button">Book Now</a>
+        <h2 class="text-xl font-bold mb-2">Hotel A</h2>
+        <p class="mb-2">Located in downtown area</p>
+        <p class="mb-2">Price per night: $100</p>
+        <a
+          href="booking-link-hotelA"
+          class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >Book Now</a
+        >
       </div>
     </div>
-    <div class="accommodation">
-      <img src="hotel2.jpg" alt="Hotel 2">
+    <div class="accommodation flex items-center mb-8">
+      <img src="hotel2.jpg" alt="Hotel 2" class="w-32 h-32 mr-4" />
       <div class="accommodation-info">
-        <h2>Hotel B</h2>
-        <p>Near conference venue</p>
-        <p>Price per night: $120</p>
-        <a href="booking-link-hotelB" class="button">Book Now</a>
+        <h2 class="text-xl font-bold mb-2">Hotel B</h2>
+        <p class="mb-2">Near conference venue</p>
+        <p class="mb-2">Price per night: $120</p>
+        <a
+          href="booking-link-hotelB"
+          class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >Book Now</a
+        >
       </div>
     </div>
-    <div class="accommodation">
-      <img src="hotel3.jpg" alt="Hotel 3">
+    <div class="accommodation flex items-center mb-8">
+      <img src="hotel3.jpg" alt="Hotel 3" class="w-32 h-32 mr-4" />
       <div class="accommodation-info">
-        <h2>Hotel C</h2>
-        <p>Scenic view</p>
-        <p>Price per night: $150</p>
-        <a href="booking-link-hotelC" class="button">Book Now</a>
+        <h2 class="text-xl font-bold mb-2">Hotel C</h2>
+        <p class="mb-2">Scenic view</p>
+        <p class="mb-2">Price per night: $150</p>
+        <a
+          href="booking-link-hotelC"
+          class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >Book Now</a
+        >
       </div>
     </div>
   </div>
 </Layout>
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-    }
-    .accommodation {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-    }
-    .accommodation img {
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-    }
-    .accommodation-info {
-      flex: 1;
-      margin-left: 20px;
-    }
-    .accommodation-info h2 {
-      margin-top: 0;
-    }
-    .accommodation-info p {
-      margin: 5px 0;
-    }
-    .button {
-      background-color: #4caf50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .button:hover {
-      background-color: #45a049;
-    }
-  </style>
