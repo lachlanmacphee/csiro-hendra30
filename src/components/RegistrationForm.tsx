@@ -18,11 +18,11 @@ export default function RegistrationForm() {
   }
 
   return (
-    <form onSubmit={submit} class="max-w-md">
-      <h1 class="text-2xl font-bold mb-4">Conference Registration Form</h1>
+    <form onSubmit={submit}>
+      <h1 class="text-2xl font-bold mb-4">Register Your Interest</h1>
       <div class="mb-4">
         <label for="firstname" class="block mb-2">
-          First Name:
+          First Name
         </label>
         <input
           type="text"
@@ -34,7 +34,7 @@ export default function RegistrationForm() {
       </div>
       <div class="mb-4">
         <label for="lastname" class="block mb-2">
-          Last Name:
+          Last Name
         </label>
         <input
           type="text"
@@ -46,7 +46,7 @@ export default function RegistrationForm() {
       </div>
       <div class="mb-4">
         <label for="email" class="block mb-2">
-          Email:
+          Email
         </label>
         <input
           type="email"
@@ -58,7 +58,7 @@ export default function RegistrationForm() {
       </div>
       <div class="mb-4">
         <label for="phone" class="block mb-2">
-          Phone:
+          Phone
         </label>
         <input
           type="tel"
@@ -70,7 +70,7 @@ export default function RegistrationForm() {
       </div>
       <div class="mb-4">
         <label for="company" class="block mb-2">
-          Company/Organization:
+          Company/Organisation
         </label>
         <input
           type="text"
@@ -81,7 +81,7 @@ export default function RegistrationForm() {
       </div>
       <div class="mb-4">
         <label for="attendeeType" class="block mb-2">
-          Attendee Type:
+          Attendee Type
         </label>
         <select
           id="attendeeType"
