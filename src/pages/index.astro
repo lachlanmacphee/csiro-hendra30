@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Countdown from "../components/Countdown";
 ---
 
 <Layout>
   <div class="max-w-3xl mx-auto px-4 py-8 prose">
-    <h1 class="text-3xl font-bold mb-4">Welcome to Hendra@30 Conference</h1>
-
+    <div class="flex flex-col gap-4 mb-8">
+      <h1 class="text-3xl font-bold mb-4 text-center">
+        Welcome to the Hendra@30 Conference
+      </h1>
+      <Countdown client:load />
+    </div>
     <p class="mb-4">
       The Hendra@30 conference celebrates three decades of research, awareness,
       and collaboration in combating the Hendra virus.
