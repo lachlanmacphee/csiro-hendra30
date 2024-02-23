@@ -19,7 +19,7 @@ export default function RegistrationForm() {
 
   return (
     <form onSubmit={submit}>
-      <h1 class="text-2xl font-bold mb-4">Register Your Interest</h1>
+      <h1 class="text-3xl font-bold mb-6">Register Your Interest</h1>
       <div class="mb-4">
         <label for="firstname" class="block mb-2">
           First Name
