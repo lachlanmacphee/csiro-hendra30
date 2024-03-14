@@ -2,7 +2,7 @@ import { useState, useEffect } from "preact/hooks";
 
 export default function Countdown() {
   const calculateTimeLeft = () => {
-    const difference = +new Date("2024-12-08T09:00:00") - +new Date();
+    const difference = +new Date("2024-12-08T16:00:00") - +new Date();
 
     let timeLeft: {
       days?: number;
