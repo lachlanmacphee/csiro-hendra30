@@ -45,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="mb-4">
           <label for="authors" class="block mb-2"
-            >Authors (comma separated)</label
+            >Authors (comma separated if multiple)</label
           >
           <input
             type="text"
@@ -57,7 +57,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="mb-4">
           <label for="affiliations" class="block mb-2"
-            >Affiliations (comma separated)</label
+            >Affiliations (comma separated if multiple)</label
           >
           <input
             type="text"
@@ -68,12 +68,14 @@ import Layout from "../layouts/Layout.astro";
           />
         </div>
         <div class="mb-4">
-          <label for="abstract" class="block mb-2">Abstract (250 words)</label>
+          <label for="abstract" class="block mb-2"
+            >Abstract (max 1000 characters)</label
+          >
           <textarea
             id="abstract"
             required
             rows="4"
-            maxlength="250"
+            maxlength="1000"
             class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
           ></textarea>
         </div>
@@ -111,10 +113,58 @@ import Layout from "../layouts/Layout.astro";
             <!-- Options provided by Kim -->
           </select>
         </div>
-        <div class="mb-4 flex items-center">
-          <input type="checkbox" id="studentLMIC" class="mr-2" />
-          <label for="studentLMIC">Student/LMIC</label>
-          <!-- Link or country list as an info popup -->
+        <div class="mb-4">
+          <div class="flex gap-2 items-center mb-2">
+            <label class="block">Student / LMIC</label>
+            <a
+              href="https://www.oecd.org/dac/financing-sustainable-development/development-finance-standards/DAC-List-of-ODA-Recipients-for-reporting-2024-25-flows.pdf"
+              target="_blank"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+                version="1.1"
+              >
+                <g id="surface1">
+                  <path
+                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(26,86,219);stroke-opacity:1;stroke-miterlimit:4;"
+                    d="M 22.001953 12 C 22.001953 17.525391 17.525391 22.001953 12 22.001953 C 6.474609 22.001953 1.998047 17.525391 1.998047 12 C 1.998047 6.474609 6.474609 1.998047 12 1.998047 C 17.525391 1.998047 22.001953 6.474609 22.001953 12 Z M 22.001953 12 "
+                    transform="matrix(0.666667,0,0,0.666667,0,0)"></path>
+                  <path
+                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(26,86,219);stroke-opacity:1;stroke-miterlimit:4;"
+                    d="M 12 16.001953 L 12 12 "
+                    transform="matrix(0.666667,0,0,0.666667,0,0)"></path>
+                  <path
+                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(26,86,219);stroke-opacity:1;stroke-miterlimit:4;"
+                    d="M 12 7.998047 L 12.011719 7.998047 "
+                    transform="matrix(0.666667,0,0,0.666667,0,0)"></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="flex items-center">
+            <input
+              type="radio"
+              name="student-lmic"
+              id="student"
+              value="student"
+              required
+              checked
+              class="mr-2"
+            />
+            <label for="student" class="mr-4">Student</label>
+            <input
+              type="radio"
+              id="lmic"
+              value="lmic"
+              name="student-lmic"
+              required
+              class="mr-2"
+            />
+            <label for="lmic">LMIC</label>
+          </div>
         </div>
         <div class="mb-4">
           <input
