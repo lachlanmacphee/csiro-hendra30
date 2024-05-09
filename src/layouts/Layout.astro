@@ -19,8 +19,22 @@
           <div class="flex-shrink-0">
             <a href="/" class="text-white text-2xl font-extrabold"><img class="h-12" src="/text-logo.png"/></a>
           </div>
-          <div class="hidden lg:block">
+          <div class="hidden xl:block">
             <ul class="ml-10 flex items-baseline space-x-4">
+              <li>
+                <a
+                  href="/programme"
+                  class="hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium"
+                  >Programme</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/abstracts"
+                  class="hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium"
+                  >Abstracts</a
+                >
+              </li>
               <li>
                 <a
                   href="/accommodation"
@@ -33,13 +47,6 @@
                   href="/sponsors"
                   class="hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium"
                   >Sponsors</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/programme"
-                  class="hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium"
-                  >Programme</a
                 >
               </li>
               <li>
@@ -65,13 +72,6 @@
               </li>
               <li>
                 <a
-                  href="/abstracts"
-                  class="hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium"
-                  >Abstracts</a
-                >
-              </li>
-              <li>
-                <a
                   target="_blank"
                   href="https://events.csiro.au/Events/2024/April/16/Hendra30-Henipavirus-International-Conference"
                   class="inline-block bg-violet-700 hover:bg-violet-800 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -83,8 +83,7 @@
           <button
             id="dropdownDefaultButton"
             aria-label="Dropdown Menu"
-            data-dropdown-toggle="dropdown"
-            class="inline-flex lg:hidden text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+            class="inline-flex xl:hidden text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:bg-blue-600 dark:hover:bg-violet-800"
             type="button"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +103,6 @@
                 y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg
             >
           </button>
-
           <div
             id="dropdown"
             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
@@ -113,6 +111,20 @@
               class="py-2 text-sm text-gray-700 dark:text-gray-200"
               aria-labelledby="dropdownDefaultButton"
             >
+              <li>
+                <a
+                  href="/programme"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Programme</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/abstracts"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Abstracts</a
+                >
+              </li>
               <li>
                 <a
                   href="/accommodation"
@@ -125,13 +137,6 @@
                   href="/sponsors"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >Sponsors</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/programme"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Programme</a
                 >
               </li>
               <li>
@@ -157,13 +162,6 @@
               </li>
               <li>
                 <a
-                  href="/abstracts"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Abstracts</a
-                >
-              </li>
-              <li>
-                <a
                   target="_blank"
                   href="https://events.csiro.au/Events/2024/April/16/Hendra30-Henipavirus-International-Conference"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -178,6 +176,53 @@
     <main class="p-8">
       <slot />
     </main>
-    <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script>
+      function debounce<F extends (...args: any[]) => any>(func: F, wait: number): F {
+        let timeout: ReturnType<typeof setTimeout> | null = null;
+        return function(this: any, ...args: any[]) {
+          const context = this;
+          if (timeout) {
+            clearTimeout(timeout);
+          }
+          timeout = setTimeout(() => func.apply(context, args), wait);
+          return timeout;
+        } as F;
+      }
+
+      function closeDropdown(): void {
+        const element = document.getElementById("dropdown");
+        element?.classList.remove("block");
+        element?.classList.add("hidden");
+      }
+
+      function openDropdown(): void {
+        const element = document.getElementById("dropdown");
+        element?.classList.remove("hidden");
+        element?.classList.add("block", "absolute", "right-4", "top-[70px]");
+      }
+
+      function toggleDropdown(): void {
+        const element = document.getElementById("dropdown");
+        if (element?.classList.contains("hidden")) {
+          openDropdown();
+          return;
+        }
+        closeDropdown();
+      }
+
+      // Debounce the closeDropdown function with a delay of 200ms
+      const debouncedCloseDropdown = debounce(closeDropdown, 200);
+
+      window.addEventListener("resize", debouncedCloseDropdown);
+
+      const dropdownButton = document.getElementById("dropdownDefaultButton");
+      dropdownButton?.addEventListener("click", toggleDropdown);
+      dropdownButton?.addEventListener("blur", closeDropdown);
+
+      const dropdown = document.getElementById("dropdown");
+      dropdown?.addEventListener("mousedown", (event: MouseEvent) => {
+        event.preventDefault();
+      });
+    </script>
   </body>
 </html>

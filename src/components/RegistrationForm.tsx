@@ -98,7 +98,7 @@ export default function RegistrationForm() {
         <input
           type="submit"
           value="Register"
-          class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
+          class="w-full bg-violet-700 hover:bg-violet-800 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
         />
       </div>
       {responseMessage && <p>{responseMessage}</p>}

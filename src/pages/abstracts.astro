@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
           />
         </div>
         <div class="mb-4">
-          <label for="title" class="block mb-2">Title</label>
+          <label for="title" class="block mb-2">Abstract Title</label>
           <input
             type="text"
             id="title"
@@ -69,13 +69,13 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="mb-4">
           <label for="abstract" class="block mb-2"
-            >Abstract (max 1000 characters)</label
+            >Abstract (max 2000 characters)</label
           >
           <textarea
             id="abstract"
             required
             rows="4"
-            maxlength="1000"
+            maxlength="2000"
             class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
           ></textarea>
         </div>
@@ -89,7 +89,7 @@ import Layout from "../layouts/Layout.astro";
               value="talk"
               required
               checked
-              class="mr-2"
+              class="mr-2 text-violet-600"
             />
             <label for="talk" class="mr-4">Talk</label>
             <input
@@ -98,19 +98,24 @@ import Layout from "../layouts/Layout.astro";
               value="poster"
               name="type"
               required
-              class="mr-2"
+              class="mr-2 text-violet-600"
             />
             <label for="poster">Poster</label>
           </div>
         </div>
         <div class="mb-4">
           <label for="topic" class="block mb-2">Topic</label>
-          <select
-            id="topic"
-            required
-            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-          >
-            <!-- Options provided by Kim -->
+          <select id="topic" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+            <option value="">Select a topic</option>
+            <option value="disease-ecology">Disease Ecology</option>
+            <option value="surveillance">Surveillance</option>
+            <option value="behavioural-determinants">Behavioural determinants of transmission</option>
+            <option value="pathogenesis">Pathogenesis in animal and non-animal models</option>
+            <option value="virology-immunology">Virology and immunology</option>
+            <option value="diagnostics">Diagnostics</option>
+            <option value="vaccines">Vaccines</option>
+            <option value="therapeutics">Therapeutics</option>
+            <option value="one-health-governance">One Health governance and policy</option>
           </select>
         </div>
         <div class="mb-4">
@@ -129,15 +134,15 @@ import Layout from "../layouts/Layout.astro";
               >
                 <g id="surface1">
                   <path
-                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(26,86,219);stroke-opacity:1;stroke-miterlimit:4;"
+                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(124 58 237);stroke-opacity:1;stroke-miterlimit:4;"
                     d="M 22.001953 12 C 22.001953 17.525391 17.525391 22.001953 12 22.001953 C 6.474609 22.001953 1.998047 17.525391 1.998047 12 C 1.998047 6.474609 6.474609 1.998047 12 1.998047 C 17.525391 1.998047 22.001953 6.474609 22.001953 12 Z M 22.001953 12 "
                     transform="matrix(0.666667,0,0,0.666667,0,0)"></path>
                   <path
-                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(26,86,219);stroke-opacity:1;stroke-miterlimit:4;"
+                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(124 58 237);stroke-opacity:1;stroke-miterlimit:4;"
                     d="M 12 16.001953 L 12 12 "
                     transform="matrix(0.666667,0,0,0.666667,0,0)"></path>
                   <path
-                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(26,86,219);stroke-opacity:1;stroke-miterlimit:4;"
+                    style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(124 58 237);stroke-opacity:1;stroke-miterlimit:4;"
                     d="M 12 7.998047 L 12.011719 7.998047 "
                     transform="matrix(0.666667,0,0,0.666667,0,0)"></path>
                 </g>
@@ -152,7 +157,7 @@ import Layout from "../layouts/Layout.astro";
               value="student"
               required
               checked
-              class="mr-2"
+              class="mr-2 text-violet-600"
             />
             <label for="student" class="mr-4">Student</label>
             <input
@@ -161,16 +166,25 @@ import Layout from "../layouts/Layout.astro";
               value="lmic"
               name="student-lmic"
               required
-              class="mr-2"
+              class="mr-2 text-violet-600"
             />
-            <label for="lmic">LMIC</label>
+            <label for="lmic" class="mr-4">LMIC</label>
+            <input
+              type="radio"
+              id="none"
+              value="none"
+              name="student-none"
+              required
+              class="mr-2 text-violet-600"
+            />
+            <label for="none">N/A</label>
           </div>
         </div>
         <div class="mb-4">
           <input
             type="submit"
-            value="Register"
-            class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
+            value="Submit"
+            class="w-full bg-violet-700 hover:bg-violet-800 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
           />
         </div>
       </form>
