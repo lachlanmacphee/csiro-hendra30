@@ -6,7 +6,15 @@ import { google } from "googleapis";
 const sheets = google.sheets({
   version: "v4",
   auth: new google.auth.GoogleAuth({
-    credentials,
+    credentials: {
+      type: "service_account",
+      project_id: "hendra30",
+      private_key_id: import.meta.env.GOOGLE_PRIVATE_KEY_ID,
+      private_key: import.meta.env.GOOGLE_PRIVATE_KEY,
+      client_email: import.meta.env.GOOGLE_CLIENT_EMAIL,
+      client_id: import.meta.env.GOOGLE_CLIENT_ID,
+      universe_domain: "googleapis.com",
+    },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   }),
 });
