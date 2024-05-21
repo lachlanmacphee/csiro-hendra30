@@ -1,4 +1,3 @@
-import credentials from "../../../hendra30-ae97703a6cae.json";
 import type { APIRoute } from "astro";
 import { google } from "googleapis";
 
