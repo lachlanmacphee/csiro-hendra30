@@ -1,5 +1,10 @@
 import type { APIRoute } from "astro";
 import { google } from "googleapis";
+import validator from "validator";
+import xss from "xss";
+
+const MAX_NAME_LENGTH = 50;
+const MAX_ABSTRACT_BODY_LENGTH = 2000;
 
 // Initialise the Google Sheets API client
 const sheets = google.sheets({
@@ -23,36 +28,82 @@ const sheetName = "Abstracts";
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
-  const firstName = data.get("firstName");
-  const surname = data.get("surname");
-  const email = data.get("email");
-  const abstractTitle = data.get("title");
-  const abstractAuthors = data.get("authors");
-  const abstractAffiliations = data.get("affiliations");
-  const abstractBody = data.get("abstract");
-  const abstractType = data.get("type");
-  const abstractTopic = data.get("topic");
-  const abstractStudentLmic = data.get("student-lmic");
+  const firstNameUnsan = data.get("firstName")?.toString() || "";
+  const surnameUnsan = data.get("surname")?.toString() || "";
+  const emailUnsan = data.get("email")?.toString() || "";
+  const abstractTitleUnsan = data.get("title")?.toString() || "";
+  const abstractAuthorsUnsan = data.get("authors")?.toString() || "";
+  const abstractAffiliationsUnsan = data.get("affiliations")?.toString() || "";
+  const abstractBodyUnsan = data.get("abstract")?.toString() || "";
+  const abstractTypeUnsan = data.get("type")?.toString() || "";
+  const abstractTopicUnsan = data.get("topic")?.toString() || "";
+  const abstractStudentLmicUnsan = data.get("student-lmic")?.toString() || "";
 
+  // Check for missing fields
   if (
-    !firstName ||
-    !surname ||
-    !email ||
-    !abstractTitle ||
-    !abstractAuthors ||
-    !abstractAffiliations ||
-    !abstractBody ||
-    !abstractType ||
-    !abstractTopic ||
-    !abstractStudentLmic
+    !firstNameUnsan ||
+    !surnameUnsan ||
+    !emailUnsan ||
+    !abstractTitleUnsan ||
+    !abstractAuthorsUnsan ||
+    !abstractAffiliationsUnsan ||
+    !abstractBodyUnsan ||
+    !abstractTypeUnsan ||
+    !abstractTopicUnsan ||
+    !abstractStudentLmicUnsan
   ) {
     return new Response(
       JSON.stringify({
-        message: "Missing required fields",
+        message: "Missing one or multiple required fields",
       }),
       { status: 400 },
     );
   }
+
+  // Check for invalid email format
+  if (!validator.isEmail(emailUnsan)) {
+    return new Response(
+      JSON.stringify({
+        message: "Invalid email format",
+      }),
+      { status: 400 },
+    );
+  }
+
+  // Check for name length
+  if (
+    firstNameUnsan.length > MAX_NAME_LENGTH ||
+    surnameUnsan.length > MAX_NAME_LENGTH
+  ) {
+    return new Response(
+      JSON.stringify({
+        message: `First name or surname exceeds maximum allowed length of ${MAX_NAME_LENGTH} characters`,
+      }),
+      { status: 400 },
+    );
+  }
+
+  // Check for abstract body length
+  if (abstractBodyUnsan.length > MAX_ABSTRACT_BODY_LENGTH) {
+    return new Response(
+      JSON.stringify({
+        message: `Abstract body exceeds maximum allowed length of ${MAX_ABSTRACT_BODY_LENGTH} characters`,
+      }),
+      { status: 400 },
+    );
+  }
+
+  // Sanitize and escape input
+  const firstName = xss(validator.escape(firstNameUnsan));
+  const surname = xss(validator.escape(surnameUnsan));
+  const email = xss(emailUnsan);
+  const abstractTitle = xss(validator.escape(abstractTitleUnsan));
+  const abstractAuthors = xss(validator.escape(abstractAuthorsUnsan));
+  const abstractAffiliations = xss(validator.escape(abstractAffiliationsUnsan));
+  const abstractBody = xss(validator.escape(abstractBodyUnsan));
+  const abstractType = xss(validator.escape(abstractTypeUnsan));
+  const abstractTopic = xss(validator.escape(abstractTopicUnsan));
+  const abstractStudentLmic = xss(validator.escape(abstractStudentLmicUnsan));
 
   await sheets.spreadsheets.values.append({
     spreadsheetId,
