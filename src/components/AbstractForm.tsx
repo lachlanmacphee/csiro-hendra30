@@ -208,10 +208,21 @@ export default function AbstractForm() {
           <input
             type="radio"
             name="student-lmic"
+            id="student-and-lmic"
+            value="student-and-lmic"
+            required
+            checked
+            class="mr-2 text-violet-600"
+          />
+          <label for="student" class="mr-4">
+            Student & LMIC
+          </label>
+          <input
+            type="radio"
+            name="student-lmic"
             id="student"
             value="student"
             required
-            checked
             class="mr-2 text-violet-600"
           />
           <label for="student" class="mr-4">
