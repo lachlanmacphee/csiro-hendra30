@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hendra30.com/sitemap-index.xml
