@@ -1,7 +1,24 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "../layouts/Layout.astro";
 import Countdown from "../components/Countdown";
 export const prerender = true;
+
+import alisonPeel from '../media/loc-int-committee/alison-peel.jpg';
+import carlieSoul from '../media/loc-int-committee/carlie-soul.jpg';
+import daniAnderson from '../media/loc-int-committee/dani-anderson.jpg';
+import emmieDeWit from '../media/loc-int-committee/emmie-de-wit.jpg';
+import glennMarsh from '../media/loc-int-committee/glenn-marsh.png';
+import jenniferBarr from '../media/loc-int-committee/jennifer-barr.jpg';
+import jonEpstein from '../media/loc-int-committee/jon-epstein.jpg';
+import kimHalpin from '../media/loc-int-committee/kim-halpin.jpg';
+import linfaWang from '../media/loc-int-committee/linfa-wang.jpg';
+import liyenChangUm from '../media/loc-int-committee/liyen-chang-um.jpg';
+import rainaPlowright from '../media/loc-int-committee/raina-plowright.jpg';
+import richardJarman from '../media/loc-int-committee/richard-jarman.jpg';
+import sarahEdwards from '../media/loc-int-committee/sarah-edwards.jpg';
+import supaWacharapluesadee from '../media/loc-int-committee/supa-wacharapluesadee.jpg';
+import wandaMarkotter from '../media/loc-int-committee/wanda-markotter.jpg';
 ---
 
 <Layout>
@@ -21,7 +38,7 @@ export const prerender = true;
       <li><strong>Date:</strong> Sunday December 8th - Wednesday Dec 11th</li>
       <li>
         <strong>Venue:</strong> <a
-        class="text-violet-600 hover:underline"
+       class="text-violet-600 hover:underline"
         href="https://thepiergeelong.com.au/about-us/our-venue/"
         >The Pier</a
       >, Geelong's waterfront function venue
@@ -33,15 +50,17 @@ export const prerender = true;
     <p class="mb-4">
       For inquiries, please contact <a
         href="mailto:info@hendra30.com"
-        class="text-violet-600 hover:underline">info@hendra30.com</a
+       class="text-violet-600 hover:underline">info@hendra30.com</a
       >.
     </p>
-    <!-- <img src="pier_01.jpg" class="h-auto rounded-lg" alt="Picture of the venue, The Pier" /> -->
+    <!-- <Image width="256" height="256"  src="pier_01.jpg" class="h-auto rounded-lg" alt="Picture of the venue, The Pier" /> -->
     <h2>International Organising Committee</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
       <!-- Alison Peel -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/alison-peel.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={alisonPeel} alt="Alison Peel">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Alison Peel</h3>
           <p class="text-gray-600">University of Sydney, Sydney</br>Griffith University, Brisbane</p>
@@ -49,7 +68,9 @@ export const prerender = true;
       </div>
       <!-- Danielle Anderson -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/dani-anderson.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={daniAnderson} alt="Dani Anderson">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Danielle Anderson</h3>
           <p class="text-gray-600">Victorian Infectious Diseases Reference Laboratory</br>Melbourne, Australia</p>
@@ -57,7 +78,9 @@ export const prerender = true;
       </div>
       <!-- Emmie de Wit -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/emmie-de-wit.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={emmieDeWit} alt="Emmie de Wit">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Emmie de Wit</h3>
           <p class="text-gray-600">Rocky Mountain Laboratories, NIAID, NIH</br>Hamilton, Montana, USA</p>
@@ -65,7 +88,9 @@ export const prerender = true;
       </div>
       <!-- Glenn Marsh -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/glenn-marsh.png">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={glennMarsh} alt="Glenn Marsh">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Glenn Marsh</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
@@ -73,7 +98,9 @@ export const prerender = true;
       </div>
       <!-- Jennifer Barr -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/jennifer-barr.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={jenniferBarr} alt="Jennifer Barr">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Jennifer Barr</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
@@ -81,7 +108,9 @@ export const prerender = true;
       </div>
       <!-- Jon Epstein -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/jon-epstein.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={jonEpstein} alt="Jon Epstein">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Jon Epstein</h3>
           <p class="text-gray-600">Ecohealth Alliance</br>New York, USA</p>
@@ -89,7 +118,9 @@ export const prerender = true;
       </div>
       <!-- Kim Halpin -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/kim-halpin.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={kimHalpin} alt="Kim Halpin">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Kim Halpin</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
@@ -97,7 +128,9 @@ export const prerender = true;
       </div>
       <!-- Linfa Wang -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/linfa-wang.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={linfaWang} alt="Linfa Wang">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Linfa Wang</h3>
           <p class="text-gray-600">Duke-NUS Medical School</br>Singapore</p>
@@ -105,7 +138,9 @@ export const prerender = true;
       </div>
       <!-- Li-Yen Chang -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/liyen-chang-um.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={liyenChangUm} alt="Li-Yen Chang">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Li-Yen Chang</h3>
           <p class="text-gray-600">University Malaya</br>Kuala Lumpur, Malaysia</p>
@@ -113,7 +148,9 @@ export const prerender = true;
       </div>
       <!-- Raina Plowright -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/raina-plowright.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={rainaPlowright} alt="Raina Plowright">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Raina Plowright</h3>
           <p class="text-gray-600">Cornell University</br>New York, USA</p>
@@ -121,7 +158,9 @@ export const prerender = true;
       </div>
       <!-- Richard Jarman -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/richard-jarman.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={richardJarman} alt="Richard Jarman">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Richard Jarman</h3>
           <p class="text-gray-600">CEPI</br>New York, USA</p>
@@ -129,7 +168,9 @@ export const prerender = true;
       </div>
       <!-- Supaporn Wacharapluesadee -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/supa-wacharapluesadee.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={supaWacharapluesadee} alt="Supaporn Wacharapluesadee">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Supaporn Wacharapluesadee</h3>
           <p class="text-gray-600">Chulalongkorn University</br>Bangkok, Thailand</p>
@@ -137,19 +178,23 @@ export const prerender = true;
       </div>
       <!-- Wanda Markotter -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/wanda-markotter.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={wandaMarkotter} alt="Wanda Markotter">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Wanda Markotter</h3>
           <p class="text-gray-600">University of Pretoria</br>Pretoria, South Africa</p>
         </div>
       </div> 
     </div>
-    <!-- <img src="pier_02.jpg" class="h-auto rounded-lg" alt="Second picture of the venue, The Pier" /> -->
+    <!-- <Image width="256" height="256"  src="pier_02.jpg" class="h-auto rounded-lg" alt="Second picture of the venue, The Pier" /> -->
     <h2>Local Organising Committee</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
       <!-- Carlie Soul -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/carlie-soul.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={carlieSoul} alt="Carlie Soul">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Carlie Soul</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
@@ -157,7 +202,9 @@ export const prerender = true;
       </div>
       <!-- Danielle Anderson -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/dani-anderson.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={daniAnderson} alt="Dani Anderson">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Danielle Anderson</h3>
           <p class="text-gray-600">Victorian Infectious Diseases Reference Laboratory</br>Melbourne, Australia</p>
@@ -165,7 +212,9 @@ export const prerender = true;
       </div>
       <!-- Glenn Marsh -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/glenn-marsh.png">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={glennMarsh} alt="Glenn Marsh">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Glenn Marsh</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
@@ -173,7 +222,9 @@ export const prerender = true;
       </div>
       <!-- Jennifer Barr -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/jennifer-barr.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={jenniferBarr} alt="Jennifer Barr">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Jennifer Barr</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
@@ -181,7 +232,9 @@ export const prerender = true;
       </div>
       <!-- Kim Halpin -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/kim-halpin.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={kimHalpin} alt="Kim Halpin">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Kim Halpin</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
@@ -189,13 +242,15 @@ export const prerender = true;
       </div>
       <!-- Sarah Edwards -->
       <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
-        <img class="w-64 h-64 m-0 object-cover rounded-lg" src="/loc-int-committee/sarah-edwards.jpg">
+        <div>
+          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={sarahEdwards} alt="Sarah Edwards">
+        </div>
         <div class="w-64">
           <h3 class="text-lg font-semibold">Sarah Edwards</h3>
           <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
         </div>
       </div>
     </div>
-    <!-- <img src="pier_03.webp" class="h-auto rounded-lg" alt="Third picture of the venue, The Pier" /> -->
+    <!-- <Image width="256" height="256"  src="pier_03.webp" class="h-auto rounded-lg" alt="Third picture of the venue, The Pier" /> -->
   </div>
 </Layout>

@@ -1,37 +1,37 @@
 import { useState, useEffect } from "preact/hooks";
 
+const calculateTimeLeft = () => {
+  const difference = +new Date("2024-12-08T16:00:00") - +new Date();
+
+  let timeLeft: {
+    days?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
+  } = {};
+
+  if (difference > 0) {
+    timeLeft = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
+  }
+
+  return timeLeft;
+};
+
 export default function Countdown() {
-  const calculateTimeLeft = () => {
-    const difference = +new Date("2024-12-08T16:00:00") - +new Date();
-
-    let timeLeft: {
-      days?: number;
-      hours?: number;
-      minutes?: number;
-      seconds?: number;
-    } = {};
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
-  };
-
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div>

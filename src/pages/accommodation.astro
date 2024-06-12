@@ -1,6 +1,12 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import HotelsMap from "../components/HotelsMap";
+
+import hotelNovotel from '../media/accommodation/hotel-novotel.jpg';
+import apartmentsVue from '../media/accommodation/apartments-vue.jpg';
+import hotelR from '../media/accommodation/hotel-r.jpg';
+import hotelHolidayInn from '../media/accommodation/hotel-holiday-inn.avif';
 export const prerender = true;
 ---
 
@@ -13,8 +19,8 @@ export const prerender = true;
     >
       <div class="bg-white rounded-lg shadow-md flex flex-col">
         <div class="h-48 overflow-hidden">
-          <img
-            src="hotel-novotel.jpg"
+          <Image
+            src={hotelNovotel}
             alt="Novotel Exterior"
             class="w-full h-full object-cover"
           />
@@ -34,8 +40,8 @@ export const prerender = true;
       </div>
       <div class="bg-white rounded-lg shadow-md flex flex-col">
         <div class="h-48 overflow-hidden">
-          <img
-            src="apartments-vue.jpg"
+          <Image
+            src={apartmentsVue}
             alt="Vue Apartments Exterior"
             class="w-full h-full object-cover"
           />
@@ -55,8 +61,8 @@ export const prerender = true;
       </div>
       <div class="bg-white rounded-lg shadow-md flex flex-col">
         <div class="h-48 overflow-hidden">
-          <img
-            src="hotel-r.jpg"
+          <Image
+            src={hotelR}
             alt="R Hotel Exterior"
             class="w-full h-full object-cover"
           />
@@ -76,8 +82,8 @@ export const prerender = true;
       </div>
       <div class="bg-white rounded-lg shadow-md flex flex-col">
         <div class="h-48 overflow-hidden">
-          <img
-            src="hotel-holiday-inn.avif"
+          <Image
+            src={hotelHolidayInn}
             alt="R Hotel Exterior"
             class="w-full h-full object-cover"
           />

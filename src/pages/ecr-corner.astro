@@ -1,6 +1,16 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 export const prerender = true;
+
+import arifulIslam from '../media/ecr-committee/ariful-islam.jpg';
+import bertaBlanchLazaro from '../media/ecr-committee/berta-blanch-lazaro.jpg';
+import emilyDowling from '../media/ecr-committee/emily-dowling.jpg';
+import gervaisHabarugira from '../media/ecr-committee/gervais-habarugira.jpg';
+import belindaLinnegar from '../media/ecr-committee/belinda-linnegar.jpg';
+import marindaMortlock from '../media/ecr-committee/marinda-mortlock.jpg';
+import melanieTripp from '../media/ecr-committee/melanie-tripp.jpg';
+import sarahVanTol from '../media/ecr-committee/sarah-van-tol.jpg';
 ---
 
 <Layout>
@@ -9,7 +19,9 @@ export const prerender = true;
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Ariful Islam -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/ariful-islam.jpg" alt="Picture of Ariful Islam">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={arifulIslam} alt="Ariful Islam">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Ariful Islam</h3>
             <p class="text-gray-600">I'm a veterinary epidemiologist and disease ecologist working as a senior scientist and Bangladesh Programs Coordinator at EcoHealth Alliance. My research focuses on the epidemiology and ecology of emerging zoonotic viruses such as Nipah (NiV), Ebola, and coronaviruses at the One Health interface. Currently, I'm working on NiV dynamics and genetics in bats and on the patterns of human outbreaks across Bangladesh.</p>
@@ -17,7 +29,9 @@ export const prerender = true;
         </div>
         <!-- Berta Blanch Lazaro -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/berta-blanch-lazaro.jpg" alt="Image Description">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={bertaBlanchLazaro} alt="Berta Blanch Lazaro">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Berta Blanch Lazaro</h3>
             <p class="text-gray-600">I'm a research veterinarian with a long-standing passion for wildlife and animal health, especially in the context of One Health. Now based at ACDP-CSIRO in Geelong, I'm a postdoctoral fellow working on developing ex-vivo models to study the pathogenesis and the host immune response to lumpy skin disease infection. </p>
@@ -25,7 +39,9 @@ export const prerender = true;
         </div>
         <!-- Emily Dowling -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/emily-dowling.jpg" alt="Image Description">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={emilyDowling} alt="Emily Dowling">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Emily Dowling</h3>
             <p class="text-gray-600">I am a first year PhD student working on characterising the virulence determinants of henipaviruses. I am based at CSIRO ACDP Geelong through Deakin University, and I am looking forward to welcoming you all to Geelong for this exciting conference to commemorate 30 years of Hendra Virus.</p>
@@ -33,7 +49,9 @@ export const prerender = true;
         </div>
         <!-- Gervais Habarugira -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/gervais-habarugira.jpg" alt="Image Description">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={gervaisHabarugira} alt="Gervais Habarugira">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Gervais Habarugira</h3>
             <p class="text-gray-600">I am a dedicated veterinarian with a strong interest in the research of infectious diseases. My focus areas include the pathobiology of infectious diseases, including pathogenesis, immune responses, and control strategies, with a particular interest in zoonotic diseases. Currently, I am a CERC fellow at the ACDP, CSIRO. My research involves investigating immune response pathways to the HeV vaccine in horses and developing tools to evaluate post-vaccination immune responses to the HeV vaccine.</p>
@@ -41,7 +59,9 @@ export const prerender = true;
         </div>
         <!-- Belinda Linnegar -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/belinda-linnegar.jpg" alt="Image Description">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={belindaLinnegar} alt="Belinda Linnegar">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Belinda Linnegar</h3>
             <p class="text-gray-600">I am a 3rd year PhD candidate at Griffith University. My research focuses on the role of domestic animals in emerging zoonoses. I am currently investigating the ecological and behavioural dynamics of domestic horses in Hendra virus spillover from flying foxes.</p>
@@ -49,7 +69,9 @@ export const prerender = true;
         </div>
         <!-- Marinda Mortlock -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/marinda-mortlock.jpg" alt="Image Description">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={marindaMortlock} alt="Marinda Mortlock">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Marinda Mortlock</h3>
             <p class="text-gray-600">I am a postdoctoral researcher in the Centre for Viral Zoonoses at the University of Pretoria, South Africa. My research focuses on bio- and serosurveillance of bat-borne paramyxoviruses at the human-wildlife-livestock interface and assessing risk of virus transmission and spill-over.</p>
@@ -57,7 +79,9 @@ export const prerender = true;
         </div>
         <!-- Melanie Tripp -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/melanie-tripp.jpg" alt="Image Description">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={melanieTripp} alt="Melanie Tripp">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Melanie Tripp</h3>
             <p class="text-gray-600">Hi there, I'm a third year PhD student working between Monash University and CSIRO-ACDP. My project is titled 'Defining differences between the Hendra virus genotypes' and I have compared features including innate immune antagonism and viral replication.</p>
@@ -65,7 +89,9 @@ export const prerender = true;
         </div>
         <!-- Sarah van Tol -->
         <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
-          <img class="w-64 h-64 object-cover rounded-lg" src="/ecr-committee/sarah-van-tol.jpg" alt="Image Description">
+          <div>
+            <Image class="w-64 h-64 object-cover rounded-lg" src={sarahVanTol} alt="Sarah Van Tol">
+          </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Sarah van Tol</h3>
             <p class="text-gray-600">I am a postdoctoral researcher (IRTA) in the Virus Ecology Section of the Laboratory of Virology at Rocky Mountain Laboratories (NIAID, NIH). I use Jamaican fruit bats as an infection model for filo- and henipavirus infections and study the innate immune system of multiple bat species. Overall, I am interested in understanding the viral, host, and environmental factors that influence susceptibility and shedding.</p>
