@@ -21,9 +21,7 @@ export default function AbstractForm() {
       <h1 class="text-3xl font-bold mb-6">Submit an Abstract</h1>
       <ol class="mb-4 list-disc pl-4">
         <li>Abstracts due on the 30th of September.</li>
-        <li>
-          Participants notified of abstract acceptances on the 1st of October.
-        </li>
+        <li>Participants notified of abstract acceptances by mid-October.</li>
         <li>Registrations due on the 1st of November.</li>
       </ol>
       <div class="mb-4">
