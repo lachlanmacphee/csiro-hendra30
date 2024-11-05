@@ -117,18 +117,6 @@ export default function AbstractForm() {
         <div class="flex items-center">
           <input
             type="radio"
-            name="type"
-            id="talk"
-            value="talk"
-            required
-            checked
-            class="mr-2 text-violet-600"
-          />
-          <label for="talk" class="mr-4">
-            Talk
-          </label>
-          <input
-            type="radio"
             id="poster"
             value="poster"
             name="type"
