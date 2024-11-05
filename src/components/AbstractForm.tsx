@@ -22,7 +22,7 @@ export default function AbstractForm() {
       <ol class="mb-4 list-disc pl-4">
         <li>Abstracts due on the 30th of September.</li>
         <li>Participants notified of abstract acceptances by mid-October.</li>
-        <li>Registrations due on the 1st of November.</li>
+        <li>Registrations due on the 10th of November.</li>
       </ol>
       <div class="mb-4">
         <label for="firstName" class="block mb-2">
