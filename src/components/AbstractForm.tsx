@@ -20,9 +20,11 @@ export default function AbstractForm() {
     <form onSubmit={submit}>
       <h1 class="text-3xl font-bold mb-6">Submit an Abstract</h1>
       <ol class="mb-4 list-disc pl-4">
-        <li>Abstracts due on the 30th of September.</li>
-        <li>Participants notified of abstract acceptances by mid-October.</li>
         <li>Registrations due on the 10th of November.</li>
+        <li>
+          You will get feedback on your poster abstract submission within a few
+          days.
+        </li>
       </ol>
       <div class="mb-4">
         <label for="firstName" class="block mb-2">
