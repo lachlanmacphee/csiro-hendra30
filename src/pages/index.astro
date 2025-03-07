@@ -1,48 +1,59 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Countdown from "../components/Countdown";
 export const prerender = true;
 
-import alisonPeel from '../media/loc-int-committee/alison-peel.jpg';
-import carlieSoul from '../media/loc-int-committee/carlie-soul.jpg';
-import daniAnderson from '../media/loc-int-committee/dani-anderson.jpg';
-import emmieDeWit from '../media/loc-int-committee/emmie-de-wit.jpg';
-import glennMarsh from '../media/loc-int-committee/glenn-marsh.png';
-import jenniferBarr from '../media/loc-int-committee/jennifer-barr.jpg';
-import jonEpstein from '../media/loc-int-committee/jon-epstein.jpg';
-import kimHalpin from '../media/loc-int-committee/kim-halpin.jpg';
-import linfaWang from '../media/loc-int-committee/linfa-wang.jpg';
-import liyenChangUm from '../media/loc-int-committee/liyen-chang-um.jpg';
-import rainaPlowright from '../media/loc-int-committee/raina-plowright.jpg';
-import richardJarman from '../media/loc-int-committee/richard-jarman.jpg';
-import sarahEdwards from '../media/loc-int-committee/sarah-edwards.jpg';
-import supaWacharapluesadee from '../media/loc-int-committee/supa-wacharapluesadee.jpg';
-import wandaMarkotter from '../media/loc-int-committee/wanda-markotter.jpg';
+import alisonPeel from "../media/loc-int-committee/alison-peel.jpg";
+import carlieSoul from "../media/loc-int-committee/carlie-soul.jpg";
+import daniAnderson from "../media/loc-int-committee/dani-anderson.jpg";
+import emmieDeWit from "../media/loc-int-committee/emmie-de-wit.jpg";
+import glennMarsh from "../media/loc-int-committee/glenn-marsh.png";
+import jenniferBarr from "../media/loc-int-committee/jennifer-barr.jpg";
+import jonEpstein from "../media/loc-int-committee/jon-epstein.jpg";
+import kimHalpin from "../media/loc-int-committee/kim-halpin.jpg";
+import linfaWang from "../media/loc-int-committee/linfa-wang.jpg";
+import liyenChangUm from "../media/loc-int-committee/liyen-chang-um.jpg";
+import rainaPlowright from "../media/loc-int-committee/raina-plowright.jpg";
+import richardJarman from "../media/loc-int-committee/richard-jarman.jpg";
+import sarahEdwards from "../media/loc-int-committee/sarah-edwards.jpg";
+import supaWacharapluesadee from "../media/loc-int-committee/supa-wacharapluesadee.jpg";
+import wandaMarkotter from "../media/loc-int-committee/wanda-markotter.jpg";
 ---
 
 <Layout>
   <div class="mx-auto px-4 prose">
     <div class="flex flex-col gap-4 mb-8">
-      <img src="infographic-logo.png" class="w-[600px] self-center" alt="Hendra@30 infographic logo with title Henipavirus International Conference, the location Geelong, Victoria, Australia, and the date 8th - 11th of December 2024" />
+      <img
+        src="infographic-logo.png"
+        class="w-[600px] self-center"
+        alt="Hendra@30 infographic logo with title Henipavirus International Conference, the location Geelong, Victoria, Australia, and the date 8th - 11th of December 2024"
+      />
       <Countdown client:load />
     </div>
+    <p class="font-bold">
+      If you'd like to see the photos from the event, please <a
+        class="text-violet-600 hover:underline"
+        href="https://drive.google.com/drive/folders/1GgLrCA32gqfSEvXql5CkU3xVbEKMwAA4"
+        >click here</a
+      >.
+    </p>
     <p>
-      The Hendra@30 conference commemorates 30 years since Hendra virus,
-      the first henipavirus, was discovered. Join us in Geelong, Victoria
-      in December 2024 to hear about the progress made through research
-      in understanding the henipaviruses.
+      The Hendra@30 conference commemorates 30 years since Hendra virus, the
+      first henipavirus, was discovered. Join us in Geelong, Victoria in
+      December 2024 to hear about the progress made through research in
+      understanding the henipaviruses.
     </p>
     <h2>Key Information</h2>
     <strong>Note: Late breaking poster abstracts are being accepted.</strong>
     <ul>
       <li><strong>Date:</strong> Sunday December 8th - Wednesday Dec 11th</li>
       <li>
-        <strong>Venue:</strong> <a
-       class="text-violet-600 hover:underline"
-        href="https://thepiergeelong.com.au/about-us/our-venue/"
-        >The Pier</a
-      >, Geelong's waterfront function venue
+        <strong>Venue:</strong>
+        <a
+          class="text-violet-600 hover:underline"
+          href="https://thepiergeelong.com.au/about-us/our-venue/">The Pier</a
+        >, Geelong's waterfront function venue
       </li>
       <li><strong>Abstracts Due:</strong> 30th of September</li>
       <li><strong>Travel Grants Due:</strong> 30th of September</li>
@@ -54,204 +65,381 @@ import wandaMarkotter from '../media/loc-int-committee/wanda-markotter.jpg';
     <p class="mb-4">
       For inquiries, please contact <a
         href="mailto:info@hendra30.com"
-       class="text-violet-600 hover:underline">info@hendra30.com</a
+        class="text-violet-600 hover:underline">info@hendra30.com</a
       >.
     </p>
     <!-- <Image width="256" height="256"  src="pier_01.jpg" class="h-auto rounded-lg" alt="Picture of the venue, The Pier" /> -->
     <h2>International Organising Committee</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
       <!-- Alison Peel -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={alisonPeel} alt="Alison Peel">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Alison Peel</h3>
-          <p class="text-gray-600">University of Sydney, Sydney</br>Griffith University, Brisbane</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={alisonPeel}
+            alt="Alison Peel"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Alison Peel</h3>
+            <p class="text-gray-600">University of Sydney, Sydney</p>Griffith
+            University, Brisbane
+          </div>
         </div>
       </div>
       <!-- Danielle Anderson -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={daniAnderson} alt="Dani Anderson">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Danielle Anderson</h3>
-          <p class="text-gray-600">Victorian Infectious Diseases Reference Laboratory</br>Melbourne, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={daniAnderson}
+            alt="Dani Anderson"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Danielle Anderson</h3>
+            <p class="text-gray-600">
+              Victorian Infectious Diseases Reference Laboratory
+            </p>Melbourne, Australia
+          </div>
         </div>
       </div>
       <!-- Emmie de Wit -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={emmieDeWit} alt="Emmie de Wit">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Emmie de Wit</h3>
-          <p class="text-gray-600">Rocky Mountain Laboratories, NIAID, NIH</br>Hamilton, Montana, USA</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={emmieDeWit}
+            alt="Emmie de Wit"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Emmie de Wit</h3>
+            <p class="text-gray-600">
+              Rocky Mountain Laboratories, NIAID, NIH
+            </p>Hamilton, Montana, USA
+          </div>
         </div>
       </div>
       <!-- Glenn Marsh -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={glennMarsh} alt="Glenn Marsh">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Glenn Marsh</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={glennMarsh}
+            alt="Glenn Marsh"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Glenn Marsh</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
       <!-- Jennifer Barr -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={jenniferBarr} alt="Jennifer Barr">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Jennifer Barr</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={jenniferBarr}
+            alt="Jennifer Barr"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Jennifer Barr</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
       <!-- Jon Epstein -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={jonEpstein} alt="Jon Epstein">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Jon Epstein</h3>
-          <p class="text-gray-600">Ecohealth Alliance</br>New York, USA</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={jonEpstein}
+            alt="Jon Epstein"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Jon Epstein</h3>
+            <p class="text-gray-600">Ecohealth Alliance</p>New York, USA
+          </div>
         </div>
       </div>
       <!-- Kim Halpin -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={kimHalpin} alt="Kim Halpin">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Kim Halpin</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={kimHalpin}
+            alt="Kim Halpin"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Kim Halpin</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
       <!-- Linfa Wang -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={linfaWang} alt="Linfa Wang">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Linfa Wang</h3>
-          <p class="text-gray-600">Duke-NUS Medical School</br>Singapore</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={linfaWang}
+            alt="Linfa Wang"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Linfa Wang</h3>
+            <p class="text-gray-600">Duke-NUS Medical School</p>Singapore
+          </div>
         </div>
       </div>
       <!-- Li-Yen Chang -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={liyenChangUm} alt="Li-Yen Chang">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Li-Yen Chang</h3>
-          <p class="text-gray-600">University Malaya</br>Kuala Lumpur, Malaysia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={liyenChangUm}
+            alt="Li-Yen Chang"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Li-Yen Chang</h3>
+            <p class="text-gray-600">University Malaya</p>Kuala Lumpur, Malaysia
+          </div>
         </div>
       </div>
       <!-- Raina Plowright -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={rainaPlowright} alt="Raina Plowright">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Raina Plowright</h3>
-          <p class="text-gray-600">Cornell University</br>New York, USA</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={rainaPlowright}
+            alt="Raina Plowright"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Raina Plowright</h3>
+            <p class="text-gray-600">Cornell University</p>New York, USA
+          </div>
         </div>
       </div>
       <!-- Richard Jarman -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={richardJarman} alt="Richard Jarman">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Richard Jarman</h3>
-          <p class="text-gray-600">CEPI</br>New York, USA</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={richardJarman}
+            alt="Richard Jarman"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Richard Jarman</h3>
+            <p class="text-gray-600">CEPI</p>New York, USA
+          </div>
         </div>
       </div>
       <!-- Supaporn Wacharapluesadee -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={supaWacharapluesadee} alt="Supaporn Wacharapluesadee">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Supaporn Wacharapluesadee</h3>
-          <p class="text-gray-600">Chulalongkorn University</br>Bangkok, Thailand</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={supaWacharapluesadee}
+            alt="Supaporn Wacharapluesadee"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Supaporn Wacharapluesadee</h3>
+            <p class="text-gray-600">Chulalongkorn University</p>Bangkok,
+            Thailand
+          </div>
         </div>
       </div>
       <!-- Wanda Markotter -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={wandaMarkotter} alt="Wanda Markotter">
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={wandaMarkotter}
+            alt="Wanda Markotter"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Wanda Markotter</h3>
+            <p class="text-gray-600">University of Pretoria</p>Pretoria, South
+            Africa
+          </div>
         </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Wanda Markotter</h3>
-          <p class="text-gray-600">University of Pretoria</br>Pretoria, South Africa</p>
-        </div>
-      </div> 
+      </div>
     </div>
     <!-- <Image width="256" height="256"  src="pier_02.jpg" class="h-auto rounded-lg" alt="Second picture of the venue, The Pier" /> -->
     <h2>Local Organising Committee</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
       <!-- Carlie Soul -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={carlieSoul} alt="Carlie Soul">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Carlie Soul</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={carlieSoul}
+            alt="Carlie Soul"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Carlie Soul</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
       <!-- Danielle Anderson -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={daniAnderson} alt="Dani Anderson">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Danielle Anderson</h3>
-          <p class="text-gray-600">Victorian Infectious Diseases Reference Laboratory</br>Melbourne, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={daniAnderson}
+            alt="Dani Anderson"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Danielle Anderson</h3>
+            <p class="text-gray-600">
+              Victorian Infectious Diseases Reference Laboratory
+            </p>Melbourne, Australia
+          </div>
         </div>
       </div>
       <!-- Glenn Marsh -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={glennMarsh} alt="Glenn Marsh">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Glenn Marsh</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={glennMarsh}
+            alt="Glenn Marsh"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Glenn Marsh</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
       <!-- Jennifer Barr -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={jenniferBarr} alt="Jennifer Barr">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Jennifer Barr</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={jenniferBarr}
+            alt="Jennifer Barr"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Jennifer Barr</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
       <!-- Kim Halpin -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={kimHalpin} alt="Kim Halpin">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Kim Halpin</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={kimHalpin}
+            alt="Kim Halpin"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Kim Halpin</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
       <!-- Sarah Edwards -->
-      <div class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center">
+      <div
+        class="bg-white rounded-lg shadow-md p-4 max-w-sm flex flex-col items-center"
+      >
         <div>
-          <Image width="256" height="256" class="w-64 h-64 m-0 object-cover rounded-lg" src={sarahEdwards} alt="Sarah Edwards">
-        </div>
-        <div class="w-64">
-          <h3 class="text-lg font-semibold">Sarah Edwards</h3>
-          <p class="text-gray-600">Australian Centre for Disease Preparedness</br>Geelong, Australia</p>
+          <Image
+            width="256"
+            height="256"
+            class="w-64 h-64 m-0 object-cover rounded-lg"
+            src={sarahEdwards}
+            alt="Sarah Edwards"
+          />
+          <div class="w-64">
+            <h3 class="text-lg font-semibold">Sarah Edwards</h3>
+            <p class="text-gray-600">
+              Australian Centre for Disease Preparedness
+            </p>Geelong, Australia
+          </div>
         </div>
       </div>
     </div>
